@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "starter-react-js",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npx webpack-dev-server --config webpack/dev.config.js",
+    "start:prod": "npx webpack-dev-server --config webpack/prod.config.js",
+    "build": "npx webpack --config webpack/prod.config.js",
+    "build:dev": "npx webpack --config webpack/dev.config.js",
+    "format": "npx prettier --write '*/**/*.{ts,tsx,js,jsx,css}'"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "compression-webpack-plugin": "^2.0.0",
+    "html-webpack-plugin": "^4.0.0-beta.4",
+    "prettier": "^1.15.1",
+    "terser-webpack-plugin": "^1.1.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4",
+    "webpackbar": "^3.0.3"
+  },
+  "dependencies": {
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0"
+  }
+}
