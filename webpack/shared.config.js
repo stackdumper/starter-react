@@ -3,9 +3,10 @@ const path = require('path')
 // plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BarPlugin = require('webpackbar')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: 'bundle.js',
@@ -13,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
@@ -26,4 +27,8 @@ module.exports = {
     }),
     new BarPlugin(),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    plugins: [new TsconfigPathsPlugin()],
+  },
 }

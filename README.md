@@ -1,4 +1,5 @@
-# starter-react-js
+# starter-react
+> typescript
 
 ### Usage
 
